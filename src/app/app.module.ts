@@ -17,6 +17,8 @@ import { NotesComponent } from './notes/notes.component';
 import { CardComponent } from './card/card.component';
 import { MenuItemComponent } from './menu-item/menu-item.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +38,7 @@ import { MenuItemComponent } from './menu-item/menu-item.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     OAuthModule.forRoot()
   ],
   providers: [],
