@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'calender/events', component: CalenderEventsComponent },
   { path: 'personal/contacts', component: CardComponent },
   { path: 'notes', component: NotesComponent },
-  { path: 'task/kabanBoard', component: KanbanBoardComponent},
+  { path: 'task/kaban/board', component: KanbanBoardComponent},
 ];
 
 @NgModule({

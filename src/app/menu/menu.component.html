@@ -1,18 +1,24 @@
 <aside class="menu navigation">
   <p class="menu-label">{{"Project"|translate}}</p>
   <ul class="menu-list">
-    <li><a [routerLink]="['/projects']"
-        [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="is-active">{{"Calender-events"|translate}}</a>
+    <li><a [routerLink]="['/profile']" [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="is-active">{{"profile"|translate}}</a>
     </li>
-    <li><a [routerLink]="['/projects']" [routerLinkActiveOptions]="{ exact: true }"
-        routerLinkActive="is-active">{{"Notes"|translate}}</a>
+    <li><a [routerLink]="['/dasgboard']" [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="is-active">{{"dashboard"|translate}}</a>
     </li>
-    <li><a [routerLink]="['/projects']"
-        [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="is-active">{{"Tasks"|translate}}</a>
+    <li><a [routerLink]="['/calender/events']" [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="is-active">{{"Calender-events"|translate}}</a>
     </li>
-    <li><a [routerLink]="['/projects']"
-      [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="is-active">{{"Contacts"|translate}}</a>
-  </li>
+    <li><a [routerLink]="['/personal/contacts']" [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="is-active">{{"personal contacts"|translate}}</a>
+    </li>
+    <li><a [routerLink]="['/notes']" [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="is-active">{{"notes"|translate}}</a>
+    </li>
+    <li><a [routerLink]="['/task/kanban/board']" [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="is-active">{{"tasks"|translate}}</a>
+    </li>
   </ul>
 </aside>
 <div class="sidenav-overlay" (click)="closeMenu()"></div>
