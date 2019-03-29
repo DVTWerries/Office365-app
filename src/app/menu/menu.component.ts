@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
+  private menuActive: boolean;
+
   constructor() { }
 
   ngOnInit() {
+    this.openMenu();
   }
 
+  openMenu() {
+    this.menuActive = true;
+  }
+
+  closeMenu() {
+    this.menuActive = false;
+  }
 }
