@@ -1,3 +1,18 @@
-<p>
-  menu works!
-</p>
+<aside class="menu navigation">
+  <p class="menu-label">{{"Project"|translate}}</p>
+  <ul class="menu-list">
+    <li><a [routerLink]="['/projects']"
+        [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="is-active">{{"Calender-events"|translate}}</a>
+    </li>
+    <li><a [routerLink]="['/projects']" [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="is-active">{{"Notes"|translate}}</a>
+    </li>
+    <li><a [routerLink]="['/projects']"
+        [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="is-active">{{"Tasks"|translate}}</a>
+    </li>
+    <li><a [routerLink]="['/projects']"
+      [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="is-active">{{"Contacts"|translate}}</a>
+  </li>
+  </ul>
+</aside>
+<div class="sidenav-overlay" (click)="closeMenu()"></div>
