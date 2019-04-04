@@ -40,14 +40,4 @@ export class AppComponent {
   public logOut() {
     this.oauthService.logOut();
   }
-
-  public get name() {
-    const claims = this.oauthService.getIdentityClaims();
-
-    if (!claims) {
-      return null;
-    }
-
-    return (claims as any).name;
-  }
 }

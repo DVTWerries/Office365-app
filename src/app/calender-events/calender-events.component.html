@@ -1,23 +1,30 @@
 <!-- <p class="control is-expanded">
     <input class="input" type="text" placeholder="Search locales" [(ngModel)]="searchString" autocomplete="off">
-</p>
+</p> -->
 
-<article class="media locale center-align" [routerLink]="['locales', locale.ident]" *ngFor="let locale of _filteredLocales">
-    <figure class="media-left">
-        <span class="icon is-medium">
-                <i class="flag-icon flag-icon-{{locale.ident.slice(3,5).toLowerCase()}}"></i>
-            </span>
-    </figure>
-    <div class="media-content">
-        <div class="content">
-            <p class="title is-5">{{locale.language}} ({{locale.country}})</p>
-            <p>Ident: {{locale.ident}}</p>
-        </div>
-    </div>
-</article>
 
-<div *ngIf="locales && locales.length <= 0">
+<div class="events-holder" *ngIf="calendarEvents">
+    <mat-grid-list class="grid-list" cols="1" rowHeight="6:1" *ngFor="let event of calendarEvents">
+        <mat-grid-tile class="grid-tile">
+            <div class="tile-data-container">
+                <div class="event-icon-holder">
+                        <mat-icon svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
+                </div>
+                <div>
+                    <h4>location: {{event.location.uniqueId}}</h4>
+                    <p>
+                        <span>start date: {{event.start.dateTime}}</span>
+                        <span>end date: ({{event.end.dateTime}})</span>
+                    </p>
+                </div>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+
+
+<div *ngIf="calendarEvents && calendarEvents.length <= 0">
     <div class="notification is-warning">
-        {{"You haven't created any Locales yet."|translate}}
+        {{"You have no scheduled events yet."|translate}}
     </div>
-</div> -->
+</div>

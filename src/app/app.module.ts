@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import {TranslateModule} from '@ngx-translate/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatIconModule, MatGridListModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +21,7 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
 import { NotesComponent } from './notes/notes.component';
 import { CardComponent } from './card/card.component';
 import { MenuItemComponent } from './menu-item/menu-item.component';
+import { TokenInterceptor } from './intercepter/token-interceptor';
 
 @NgModule({
   declarations: [
@@ -38,12 +41,19 @@ import { MenuItemComponent } from './menu-item/menu-item.component';
   ],
   imports: [
     BrowserModule,
+    MatIconModule,
+    MatGridListModule,
     TranslateModule.forRoot(),
+    BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
     OAuthModule.forRoot()
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

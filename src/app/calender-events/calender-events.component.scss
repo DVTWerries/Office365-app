@@ -1,46 +1,22 @@
-.media.locale {
-    background: white;
-    border-radius: 2px;
+.grid-tile{
+    background: #957876;
+    opacity: 0.8;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px 2px grey;
+}
+
+.tile-data-container{
+    padding: 15px;
+}
+
+.grid-list{
     padding: 10px;
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
 }
 
-.media.locale:hover {
-    background-color: #2394d1;
-    transition:  background-color .4s cubic-bezier(0.25,0.8,0.25,1);
-    cursor: pointer;
+.events-holder{
+    padding: 10px;
 }
 
-.media.locale:active {
-    background: #2394d1;
-}
-
-.media.locale:hover p { 
-    color: #FFF;
-}
-
-.media.locale:hover p strong { 
-    color: #FFF;
-}
-
-.media.locale:active p {
-    color: #FFF;
-}
-
-.media.locale:active p strong {
-    color: #FFF;
-}
-
-.center-align {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.media-left {
-    margin-right: 20px;
-}
-
-.content .title {
-    margin-bottom: 7px;
+.event-icon-holder{
+    column-rule: 4px black
 }
