@@ -8,14 +8,13 @@ import { NotesComponent } from './notes/notes.component';
 import { KanbanBoardComponent } from './kanban-board/kanban-board.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'profile', component: DashboardComponent },
-  { path: 'calender/events', component: CalenderEventsComponent },
-  { path: 'personal/contacts', component: CardComponent },
-  { path: 'notes', component: NotesComponent },
-  { path: 'task/kaban/board', component: KanbanBoardComponent},
+  { path: 'dashboard', component: CalenderEventsComponent },
+  { path: 'dashboard/profile', component: DashboardComponent },
+  { path: 'dashboard/personal/contacts', component: CardComponent },
+  { path: 'dashboard/notes', component: NotesComponent },
+  { path: 'dashboard/task/kaban/board', component: KanbanBoardComponent},
 ];
 
 @NgModule({

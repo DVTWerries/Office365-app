@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+
+import {TranslateModule} from '@ngx-translate/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,8 +19,6 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
 import { NotesComponent } from './notes/notes.component';
 import { CardComponent } from './card/card.component';
 import { MenuItemComponent } from './menu-item/menu-item.component';
-
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    TranslateModule.forRoot(),
     AppRoutingModule,
     HttpClientModule,
     OAuthModule.forRoot()

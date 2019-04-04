@@ -4,3 +4,29 @@ $SecondColor: #9CB995;
 $ThirdColor: #A13A6A;
 $FourthColor: #5492A8;
 $Fith: #3E3A37;
+
+body{
+    margin: 0px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 10% 90%;
+}
+
+.header{
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.menu-position{
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column: 1;
+}
+
+.cotent-position{
+    grid-row: 2;
+    grid-column: 2;
+}
