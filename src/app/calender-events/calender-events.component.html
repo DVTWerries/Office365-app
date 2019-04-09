@@ -2,19 +2,28 @@
     <input class="input" type="text" placeholder="Search locales" [(ngModel)]="searchString" autocomplete="off">
 </p> -->
 
-
 <div class="events-holder" *ngIf="calendarEvents">
     <mat-grid-list class="grid-list" cols="1" rowHeight="6:1" *ngFor="let event of calendarEvents">
-        <mat-grid-tile class="grid-tile">
+        <mat-grid-tile id="whatever" class="grid-tile">
             <div class="tile-data-container">
                 <div class="event-icon-holder">
-                        <mat-icon svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
+                    <mat-icon svgIcon="event" aria-hidden="false" aria-label="Example thumbs up SVG icon">
+                    </mat-icon>
                 </div>
-                <div>
-                    <h4>location: {{event.location.uniqueId}}</h4>
+                <div class="event-location">
+                    <mat-icon svgIcon="location" aria-hidden="false" aria-label="Example thumbs up SVG icon">
+                    </mat-icon><span>{{event.location.uniqueId}}</span>
+                </div>
+                <div class="events-dates">
                     <p>
-                        <span>start date: {{event.start.dateTime}}</span>
-                        <span>end date: ({{event.end.dateTime}})</span>
+                        <mat-icon svgIcon="start-date" aria-hidden="false" aria-label="Example thumbs up SVG icon">
+                        </mat-icon>
+                        <span>{{event.start.dateTime | date: 'medium'}}</span>
+                    </p>
+                    <p>
+                        <mat-icon svgIcon="end-date" aria-hidden="false" aria-label="Example thumbs up SVG icon">
+                        </mat-icon>
+                        <span> {{event.end.dateTime | date: 'medium'}}</span>
                     </p>
                 </div>
             </div>

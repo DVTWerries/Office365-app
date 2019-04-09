@@ -1,10 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import {TranslateModule} from '@ngx-translate/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatIconModule, MatGridListModule } from '@angular/material';
+import { MatIconModule, MatGridListModule, MatFormFieldModule, MatSelectModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -43,6 +44,10 @@ import { TokenInterceptor } from './intercepter/token-interceptor';
     BrowserModule,
     MatIconModule,
     MatGridListModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    ReactiveFormsModule,
     TranslateModule.forRoot(),
     BrowserAnimationsModule,
     AppRoutingModule,

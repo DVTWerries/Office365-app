@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CalendarEvent } from '../Modals/events/events';
 import { CalendeEventsService } from '../services/calendar-events.service';
-import { MatIconRegistry} from '@angular/material';
+import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
@@ -12,17 +12,21 @@ import { DomSanitizer } from '@angular/platform-browser';
 
 export class CalenderEventsComponent implements OnInit {
 
-  // private fromDate: string;
-  // private tillDate: string;
-  // private events: CalendarEvent[] = [];
-  // public filteredEvents: CalendarEvent[]
-
   calendarEvents: CalendarEvent[];
 
-  constructor(private calendarEventsApi: CalendeEventsService, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) { 
+  constructor(private calendarEventsApi: CalendeEventsService, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(
-      'thumbs-up',
-        sanitizer.bypassSecurityTrustResourceUrl('assets/baseline-close-24px.svg'));
+      'event',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/baseline-event-24px.svg'));
+    iconRegistry.addSvgIcon(
+      'location',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/outline-my_location-24px.svg'));
+    iconRegistry.addSvgIcon(
+      'start-date',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/baseline-access_time-24px.svg'));
+    iconRegistry.addSvgIcon(
+      'end-date',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/baseline-timer-24px.svg'));
   }
 
   ngOnInit() {
@@ -30,4 +34,3 @@ export class CalenderEventsComponent implements OnInit {
   }
 
 }
- 

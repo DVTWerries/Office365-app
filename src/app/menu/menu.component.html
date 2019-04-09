@@ -1,23 +1,32 @@
 <aside class="menu navigation">
-  <p class="menu-label">{{"Project"|translate}}</p>
+  <div class="menu-top">
+    <h2>Creative Werner</h2>
+  </div>
   <ul class="menu-list">
-    <li [routerLink]="['/dashboard/profile']" [routerLinkActiveOptions]="{ exact: true }"
-    routerLinkActive="is-active"><a>{{"profile"|translate}}</a>
+    <li [routerLink]="['/dashboard']" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="is-active">
+      <mat-icon svgIcon="home" aria-hidden="false" aria-label="Example thumbs up SVG icon">
+      </mat-icon>{{"Home"|translate}}
     </li>
-    <li [routerLink]="['/dashboard']" [routerLinkActiveOptions]="{ exact: true }"
-    routerLinkActive="is-active"><a>{{"Home"|translate}}</a>
+    <li [routerLink]="['/dashboard/profile']" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="is-active">
+      <mat-icon svgIcon="person" aria-hidden="false" aria-label="Example thumbs up SVG icon">
+      </mat-icon> {{"profile"|translate}}
     </li>
     <li [routerLink]="['/dashboard/personal/contacts']" [routerLinkActiveOptions]="{ exact: true }"
-    routerLinkActive="is-active"><a>{{"personal contacts"|translate}}</a>
+      routerLinkActive="is-active">
+      <mat-icon svgIcon="contacts" aria-hidden="false" aria-label="Example thumbs up SVG icon">
+      </mat-icon>{{"Personal contacts"|translate}}
     </li>
-    <li [routerLink]="['/dashboard/notes']" [routerLinkActiveOptions]="{ exact: true }"
-    routerLinkActive="is-active"><a>{{"notes"|translate}}</a>
+    <li [routerLink]="['/dashboard/notes']" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="is-active">
+      <mat-icon svgIcon="notes" aria-hidden="false" aria-label="Example thumbs up SVG icon">
+      </mat-icon>{{"Notes"|translate}}
     </li>
     <li [routerLink]="['/dashboard/task/kaban/board']" [routerLinkActiveOptions]="{ exact: true }"
-    routerLinkActive="is-active"><a>{{"tasks"|translate}}</a>
+      routerLinkActive="is-active">
+      <mat-icon svgIcon="tasks" aria-hidden="false" aria-label="Example thumbs up SVG icon">
+      </mat-icon>{{"Tasks"|translate}}
     </li>
   </ul>
 </aside>
 <div class="sidenav-overlay" (click)="closeMenu()">
-  <mat-icon svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
+  <mat-icon svgIcon="menu-burger" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
 </div>

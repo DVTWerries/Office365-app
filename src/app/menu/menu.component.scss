@@ -1,11 +1,21 @@
 .menu.navigation {
-    padding-top: 20px;
-    background: #191A2F;
+    display: grid;
+    grid-template-rows: 11.7% 88.3%;
+    background: #131213;
     margin-left: 0px;
     height: calc(100vh - 60px);
-    box-shadow: 1px 0 3px rgba(10,10,10,0.25);
     z-index: 125;
+
+    .menu-top{
+        grid-row: 1;
+        color: white;
+        padding: 8px;
+        border-bottom: 1px solid rgb(127, 127, 129);
+        text-align: center;
+    }
+    
 }
+
 
 @media screen and (min-width: 769px) {
     .menu.navigation {
@@ -30,24 +40,23 @@
     text-decoration: none;
 
     li{
+        display: flex;
+        align-items: center;
         list-style: none;
-        padding: 10px;
-
-        &:hover{
-            color: #FFF;
-            background: rgba(23, 147, 211, 0.8);;
-            transition:  background-color .4s cubic-bezier(0.25,0.8,0.25,1);
-        }
+        padding: 20px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        color: #FFF;
+        outline: none;
 
         &.is-active{
-            background: #1793d3;
             font-weight: bold;
-            color: #FFF;
+            color: #1793d3 !important;
         }
-
-        &.is-active:hover{
-            background: #1793d3;
+    
+        &:hover{
             color: #FFF;
+            transition:  color .4s cubic-bezier(0.25,0.8,0.25,1);
         }
     }
 
@@ -57,6 +66,19 @@
         color: #DCDCDC;
         border-radius: 0;
         font-weight: bold;
+
+        &.is-active{
+            //background: #1793d3;
+            font-weight: bold;
+            color: #1793d3 !important;
+        }
+
+        
+
+        &.is-active:hover{
+            background: #1793d3;
+            color: #1793d3;
+        }
     }
 }
 
