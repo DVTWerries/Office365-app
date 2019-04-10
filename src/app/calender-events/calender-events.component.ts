@@ -20,7 +20,7 @@ export class CalenderEventsComponent implements OnInit {
       sanitizer.bypassSecurityTrustResourceUrl('assets/baseline-event-24px.svg'));
     iconRegistry.addSvgIcon(
       'location',
-      sanitizer.bypassSecurityTrustResourceUrl('assets/outline-my_location-24px.svg'));
+      sanitizer.bypassSecurityTrustResourceUrl('assets/67347.svg'));
     iconRegistry.addSvgIcon(
       'start-date',
       sanitizer.bypassSecurityTrustResourceUrl('assets/baseline-access_time-24px.svg'));

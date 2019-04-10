@@ -1,4 +1,4 @@
-export interface CalenderEventsResponse {
+export interface CalendarEventsResponse {
     '@odata.context': string; 
     '@odata.nextLink': string;
     value: CalendarEvent[];

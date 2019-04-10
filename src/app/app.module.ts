@@ -5,7 +5,9 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import {TranslateModule} from '@ngx-translate/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatIconModule, MatGridListModule, MatFormFieldModule, MatSelectModule } from '@angular/material';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {MatNativeDateModule} from '@angular/material';
+import { MaterialModule } from 'src/app/material-module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -42,17 +44,15 @@ import { TokenInterceptor } from './intercepter/token-interceptor';
   ],
   imports: [
     BrowserModule,
-    MatIconModule,
-    MatGridListModule,
     FormsModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    ReactiveFormsModule,
     TranslateModule.forRoot(),
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    OAuthModule.forRoot()
+    MaterialModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
+    OAuthModule.forRoot(),
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

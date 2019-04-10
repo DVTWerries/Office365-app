@@ -11,6 +11,7 @@
     grid-template-columns: 20% 80%;
     grid-template-rows: 20% 80%;
     width: 100%;
+    max-height: 7rem;
 }
 
 .grid-list{
@@ -40,8 +41,8 @@
     grid-row: 1;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 20px;
+    justify-content: start;
+    padding: 1rem;
 }
 
 .events-dates{
@@ -49,8 +50,7 @@
     grid-column: 2;
     padding: 15px;
     display: flex;
-    align-self: center;
-    justify-content: space-around;
+    justify-content: space-between;
 
     p{
         margin: 0;

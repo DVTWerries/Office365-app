@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Observable, from } from 'rxjs';
-import { CalendarEvent, CalenderEventsResponse } from '../Modals/Events/events';
+import { Observable } from 'rxjs';
+import { CalendarEvent, CalendarEventsResponse } from '../modals/events/events';
 import { HttpClient } from '@angular/common/http';
-import { stringify } from '@angular/core/src/render3/util';
 import { map } from 'rxjs/operators';
 
 const baseUrl = 'https://graph.microsoft.com/v1.0';
@@ -19,7 +18,7 @@ export class CalendeEventsService {
   // }
 
   getCalenderEvents(): Observable<CalendarEvent[]> {
-    return this.http.get<CalenderEventsResponse>(`${baseUrl}/me/events?$select=organizer,attendees,start,end,location`).pipe(
+    return this.http.get<CalendarEventsResponse>(`${baseUrl}/me/events?$select=organizer,attendees,start,end,location`).pipe(
       map(x => x.value)
     );
   }
