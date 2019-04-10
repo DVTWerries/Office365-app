@@ -11,8 +11,13 @@
                     </mat-icon>
                 </div>
                 <div class="event-location">
-                    <mat-icon svgIcon="location" aria-hidden="false" aria-label="Example thumbs up SVG icon">
-                    </mat-icon><span>{{event.location.uniqueId}}</span>
+                    <p>
+                        <span>{{event.subject}}</span>
+                    </p>
+                    <p>
+                        <mat-icon svgIcon="location" aria-hidden="false" aria-label="Example thumbs up SVG icon">
+                        </mat-icon><span>{{event.location.uniqueId}}</span>
+                    </p>
                 </div>
                 <div class="events-dates">
                     <p>

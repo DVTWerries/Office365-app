@@ -6,6 +6,7 @@ export interface CalendarEventsResponse {
 
 export interface CalendarEvent {
     id: string;
+    subject: string;
     start: {
         dateTime: string;
     };

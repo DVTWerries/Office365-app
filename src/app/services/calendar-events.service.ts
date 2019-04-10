@@ -18,7 +18,7 @@ export class CalendeEventsService {
   // }
 
   getCalenderEvents(): Observable<CalendarEvent[]> {
-    return this.http.get<CalendarEventsResponse>(`${baseUrl}/me/events?$select=organizer,attendees,start,end,location`).pipe(
+    return this.http.get<CalendarEventsResponse>(`${baseUrl}/me/events?$select=subject,organizer,attendees,start,end,location`).pipe(
       map(x => x.value)
     );
   }

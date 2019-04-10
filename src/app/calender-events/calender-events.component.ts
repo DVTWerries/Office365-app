@@ -30,7 +30,11 @@ export class CalenderEventsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.calendarEventsApi.getCalenderEvents().subscribe(calendarEvents => this.calendarEvents = calendarEvents);
+    this.calendarEventsApi.getCalenderEvents().subscribe(calendarEvents => {
+      this.calendarEvents = calendarEvents;
+      console.log(this.calendarEvents);
+    });
+    
   }
 
 }
