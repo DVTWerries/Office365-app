@@ -40,18 +40,27 @@
     text-decoration: none;
 
     li{
-        display: flex;
-        align-items: center;
+        display: block;
+        position: relative;
         list-style: none;
-        padding: 20px;
-        padding-bottom: 15px;
         padding-top: 15px;
         color: #FFF;
         outline: none;
+        opacity: 0.7;
 
         &.is-active{
             font-weight: bold;
             color: #1793d3 !important;
+
+            &:after {
+                content: "";
+                position: absolute;
+                right: 0px;
+                top: 28px;
+                border-right: 17px solid white;
+                border-top: 17px solid transparent;
+                border-bottom: 17px solid transparent;
+            }
         }
     
         &:hover{
@@ -61,24 +70,12 @@
     }
 
     a{
+        display: flex;
+        align-items: center;
         text-decoration: none;
         padding: 6px 20px;
-        color: #DCDCDC;
         border-radius: 0;
         font-weight: bold;
-
-        &.is-active{
-            //background: #1793d3;
-            font-weight: bold;
-            color: #1793d3 !important;
-        }
-
-        
-
-        &.is-active:hover{
-            background: #1793d3;
-            color: #1793d3;
-        }
     }
 }
 

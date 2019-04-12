@@ -4,26 +4,41 @@
   </div>
   <ul class="menu-list">
     <li [routerLink]="['/dashboard']" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="is-active">
-      <mat-icon svgIcon="home" aria-hidden="false" aria-label="Example thumbs up SVG icon">
-      </mat-icon>{{"Home"|translate}}
+      <a>
+        <mat-icon svgIcon="home" aria-hidden="false" aria-label="Example thumbs up SVG icon">
+        </mat-icon>
+        <p>{{"Home"|translate}}</p>
+      </a>
     </li>
     <li [routerLink]="['/dashboard/profile']" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="is-active">
-      <mat-icon svgIcon="person" aria-hidden="false" aria-label="Example thumbs up SVG icon">
-      </mat-icon> {{"profile"|translate}}
+      <a>
+        <mat-icon svgIcon="person" aria-hidden="false" aria-label="Example thumbs up SVG icon">
+        </mat-icon> 
+        <p>{{"profile"|translate}}</p>
+      </a>
     </li>
     <li [routerLink]="['/dashboard/personal/contacts']" [routerLinkActiveOptions]="{ exact: true }"
       routerLinkActive="is-active">
-      <mat-icon svgIcon="contacts" aria-hidden="false" aria-label="Example thumbs up SVG icon">
-      </mat-icon>{{"Personal contacts"|translate}}
+      <a>
+        <mat-icon svgIcon="contacts" aria-hidden="false" aria-label="Example thumbs up SVG icon">
+        </mat-icon>
+        <p>{{"Personal contacts"|translate}}</p>
+      </a>
     </li>
     <li [routerLink]="['/dashboard/notes']" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="is-active">
-      <mat-icon svgIcon="notes" aria-hidden="false" aria-label="Example thumbs up SVG icon">
-      </mat-icon>{{"Notes"|translate}}
+      <a>
+        <mat-icon svgIcon="notes" aria-hidden="false" aria-label="Example thumbs up SVG icon">
+        </mat-icon>
+        <p>{{"Notes"|translate}}</p>
+      </a>
     </li>
     <li [routerLink]="['/dashboard/task/kaban/board']" [routerLinkActiveOptions]="{ exact: true }"
       routerLinkActive="is-active">
-      <mat-icon svgIcon="tasks" aria-hidden="false" aria-label="Example thumbs up SVG icon">
-      </mat-icon>{{"Tasks"|translate}}
+      <a>
+        <mat-icon svgIcon="tasks" aria-hidden="false" aria-label="Example thumbs up SVG icon">
+        </mat-icon>
+        <p>{{"Tasks"|translate}}</p>
+      </a>
     </li>
   </ul>
 </aside>
