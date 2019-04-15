@@ -1,0 +1,47 @@
+<aside class="menu navigation" [class.show]="isActive">
+  <div class="menu-top">
+    <h2>Creative Werner</h2>
+  </div>
+  <ul class="menu-list">
+    <li [routerLink]="['/dashboard']" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="is-active">
+      <a>
+        <mat-icon svgIcon="home" aria-hidden="false" aria-label="Home SVG icon">
+        </mat-icon>
+        <p>{{"Home"|translate}}</p>
+      </a>
+    </li>
+    <li [routerLink]="['/dashboard/profile']" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="is-active">
+      <a>
+        <mat-icon svgIcon="person" aria-hidden="false" aria-label="Profile SVG icon">
+        </mat-icon> 
+        <p>{{"profile"|translate}}</p>
+      </a>
+    </li>
+    <li [routerLink]="['/dashboard/personal/contacts']" [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="is-active">
+      <a>
+        <mat-icon svgIcon="contacts" aria-hidden="false" aria-label="Contacts SVG icon">
+        </mat-icon>
+        <p>{{"Personal contacts"|translate}}</p>
+      </a>
+    </li>
+    <li [routerLink]="['/dashboard/notes']" [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="is-active">
+      <a>
+        <mat-icon svgIcon="notes" aria-hidden="false" aria-label="Notes SVG icon">
+        </mat-icon>
+        <p>{{"Notes"|translate}}</p>
+      </a>
+    </li>
+    <li [routerLink]="['/dashboard/task/kaban/board']" [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="is-active">
+      <a>
+        <mat-icon svgIcon="tasks" aria-hidden="false" aria-label="Task SVG icon">
+        </mat-icon>
+        <p>{{"Tasks"|translate}}</p>
+      </a>
+    </li>
+  </ul>
+</aside>
+<div class="sidenav-overlay" (click)="menuToggler()">
+  <mat-icon svgIcon="menu-burger" aria-hidden="false" aria-label="Menu toggler SVG icon"></mat-icon>
+</div>

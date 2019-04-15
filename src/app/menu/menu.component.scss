@@ -1,0 +1,101 @@
+
+$desktop: 960px;
+$tablet: 768px;
+$mobile-large: 640px;
+$mobile: 480px;
+$mobile-small: 300px;
+
+.menu.navigation {
+    display: grid;
+    grid-template-rows: 8.5% 91.5%;
+    background: #131213;
+    margin-left: 0px;
+    height: calc(100vh - 60px);
+    z-index: 125;
+
+    .menu-top{
+        grid-row: 1;
+        color: white;
+        padding: 8px;
+        border-bottom: 1px solid rgb(127, 127, 129);
+        text-align: center;
+    }
+    
+    &.show{
+        display: block;
+    }
+}
+
+@media screen and (min-width: $tablet) {
+    .sidenav-overlay{
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: $tablet) {
+    .menu.navigation {
+        display : none;
+        transition: margin-left .4s cubic-bezier(0.25,0.8,0.25,1) !important;
+    }
+}
+
+.menu.navigation.is-active {
+    margin-left: 0px;
+    transition: margin-left .4s cubic-bezier(0.25,0.8,0.25,1);
+}
+
+.menu-label {
+    color: #999A9F;
+    font-weight: bold;
+    padding: 10px 20px 0 20px;
+}
+
+.menu-list {
+    padding: 0px;
+    text-decoration: none;
+
+    li{
+        display: block;
+        position: relative;
+        list-style: none;
+        padding-top: 15px;
+        color: #FFF;
+        outline: none;
+        opacity: 0.7;
+
+        &.is-active{
+            font-weight: bold;
+            color: #1793d3 !important;
+
+            &:after {
+                content: "";
+                position: absolute;
+                right: 0px;
+                top: 28px;
+                border-right: 17px solid white;
+                border-top: 17px solid transparent;
+                border-bottom: 17px solid transparent;
+            }
+        }
+    
+        &:hover{
+            color: #FFF;
+            transition:  color .4s cubic-bezier(0.25,0.8,0.25,1);
+        }
+    }
+
+    a{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        padding: 6px 20px;
+        border-radius: 0;
+        font-weight: bold;
+    }
+}
+
+.sidenav-overlay.is-active {
+    opacity: 0.4;
+    visibility: visible;
+    transition:  opacity .4s cubic-bezier(0.25,0.8,0.25,1);
+}

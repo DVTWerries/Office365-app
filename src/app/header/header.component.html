@@ -1,0 +1,9 @@
+<p class="header-text">{{selected}}</p>
+<mat-form-field>
+    <mat-label>Sort by: </mat-label>
+    <mat-select [(value)]="selected">
+      <mat-option>None</mat-option>
+      <mat-option value="Recent">Recent</mat-option>
+      <mat-option value="Location">Location</mat-option>
+    </mat-select>
+  </mat-form-field>
