@@ -6,10 +6,16 @@ import { Observable, BehaviorSubject } from 'rxjs';
 })
 export class UtilsService {
 
-  private titleSource = new BehaviorSubject('Home');
+  private menuIsActiveSource = new BehaviorSubject(false);
+  private titleSource = new BehaviorSubject("Home");
+  currentMenuIsActive = this.menuIsActiveSource.asObservable();
   currentTitle = this.titleSource.asObservable();
 
   constructor() { }
+
+  setMenuState(menuIsActive: boolean) {
+    this.menuIsActiveSource.next(menuIsActive);
+  }
 
   setTitle(title: string) {
     this.titleSource.next(title);

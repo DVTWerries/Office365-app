@@ -1,6 +1,13 @@
+
+$desktop: 960px;
+$tablet: 768px;
+$mobile-large: 640px;
+$mobile: 480px;
+$mobile-small: 300px;
+
 .menu.navigation {
     display: grid;
-    grid-template-rows: 11.7% 88.3%;
+    grid-template-rows: 8.5% 91.5%;
     background: #131213;
     margin-left: 0px;
     height: calc(100vh - 60px);
@@ -14,13 +21,21 @@
         text-align: center;
     }
     
+    &.show{
+        display: block;
+    }
 }
 
+@media screen and (min-width: $tablet) {
+    .sidenav-overlay{
+        display: none !important;
+    }
+}
 
-@media screen and (min-width: 769px) {
+@media screen and (max-width: $tablet) {
     .menu.navigation {
-        margin-left: 0px;
-        transition: margin-left .4s cubic-bezier(0.25,0.8,0.25,1);
+        display : none;
+        transition: margin-left .4s cubic-bezier(0.25,0.8,0.25,1) !important;
     }
 }
 

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, isDevMode } from '@angular/core';
 import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
+import { UtilsService } from '../services/utils.service';
 
 @Component({
   selector: 'app-menu',
@@ -9,9 +10,9 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class MenuComponent implements OnInit {
 
-  private menuActive: boolean;
+  private isActive: boolean = false;
 
-  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer, private utilsService: UtilsService) {
     iconRegistry.addSvgIcon(
       'person',
       sanitizer.bypassSecurityTrustResourceUrl('assets/outline-person-24px.svg'));
@@ -29,19 +30,21 @@ export class MenuComponent implements OnInit {
       sanitizer.bypassSecurityTrustResourceUrl('assets/baseline-timer-24px.svg'));
     iconRegistry.addSvgIcon(
       'menu-burger',
-      sanitizer.bypassSecurityTrustResourceUrl('assets/baseline-close-24px.svg'));
+      sanitizer.bypassSecurityTrustResourceUrl('assets/baseline-menu-24px.svg'));
   }
 
   ngOnInit() {
-    this.openMenu();
+    this.utilsService.currentMenuIsActive.subscribe(message => this.isActive = message)
   }
 
-  openMenu() {
-    this.menuActive = true;
-  }
-
-  closeMenu() {
-    console.log("hello");
-    this.menuActive = false;
+  menuToggler() {
+    if(this.isActive) {
+      console.log('hello');
+      this.utilsService.setMenuState(false);
+    }
+    else{
+      console.log('hello');
+      this.utilsService.setMenuState(true);
+    }
   }
 }

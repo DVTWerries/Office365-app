@@ -1,5 +1,5 @@
 <app-header class="header"></app-header>
 <app-menu class="menu-position"></app-menu>
-<div>
+<div class="app-content" [class.slide]="menuIsActive">
     <router-outlet></router-outlet>
 </div>
