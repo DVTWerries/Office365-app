@@ -22,7 +22,6 @@ export class UtilsService {
   }
 
   parseHtmlResponse(data: string) {
-    console.log(data);
     let response = "";
     response = data.replace(/(?<=<title>).*(?=<\/title>)/gm, '');
     response = response.replace(/<(?:.|\n)*?>/gm, '');
