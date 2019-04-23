@@ -20,4 +20,12 @@ export class UtilsService {
   setTitle(title: string) {
     this.titleSource.next(title);
   }
+
+  parseHtmlResponse(data: string) {
+    console.log(data);
+    let response = "";
+    response = data.replace(/(?<=<title>).*(?=<\/title>)/gm, '');
+    response = response.replace(/<(?:.|\n)*?>/gm, '');
+    return response.trim();
+  }
 }

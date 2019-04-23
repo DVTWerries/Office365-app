@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CalendarEvent } from '../Modals/events/events';
+import { CalendarEvent } from '../modals/events/events';
 import { CalendeEventsService } from '../services/calendar-events.service';
 import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -32,7 +32,6 @@ export class CalenderEventsComponent implements OnInit {
   ngOnInit() {
     this.calendarEventsApi.getCalenderEvents().subscribe(calendarEvents => {
       this.calendarEvents = calendarEvents;
-      console.log(this.calendarEvents);
     });
     
   }
