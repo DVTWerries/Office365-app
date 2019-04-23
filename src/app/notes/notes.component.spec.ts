@@ -19,7 +19,23 @@ describe('NotesComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should crearte note component', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should apply focus class when the user clicks on write a note element', () => {
+    expect(component.inputFocusClass).toEqual('true');
+  });
+
+  it('should remove focus class when the user clicks save notes', () => {
+    expect(component.inputFocusClass).toEqual('false');
+  });
+
+  it('should display new added note', () => {
+    expect(component)
+  });
+
+  it('should display all the notes the user created', () => {
+    expect(component)
   });
 });

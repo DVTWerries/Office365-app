@@ -39,11 +39,9 @@ export class MenuComponent implements OnInit {
 
   menuToggler() {
     if(this.isActive) {
-      console.log('hello');
       this.utilsService.setMenuState(false);
     }
     else{
-      console.log('hello');
       this.utilsService.setMenuState(true);
     }
   }
